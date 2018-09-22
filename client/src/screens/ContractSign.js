@@ -62,7 +62,7 @@ export default class ContractSign extends Component {
 
           <br/><br/>
         </form>
-          <Link to="/">Next</Link>
+          <Link to="/contracts">Next</Link>
         </div>
       </div>
     );
