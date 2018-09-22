@@ -12,7 +12,7 @@ export default class ContractVerify extends Component {
         </div>
         <div className="content">
           <div>Image goes here.</div>
-          <Link to="/sign">Sign</Link>
+          <Link to="/contracts">Confirm</Link>
         </div>
       </div>
     );

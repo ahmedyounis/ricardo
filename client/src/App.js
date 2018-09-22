@@ -6,6 +6,7 @@ import ContractSelect from './screens/ContractSelect';
 import ContractCreate from './screens/ContractCreate';
 import ContractVerify from './screens/ContractVerify';
 import ContractSign from './screens/ContractSign';
+import MyContracts from './screens/MyContracts';
 
 class App extends Component {
 
@@ -30,6 +31,11 @@ class App extends Component {
         path: '/sign',
         component: ContractSign,
         key: 'sign'
+      },
+      {
+        path: '/contracts',
+        component: MyContracts,
+        key: 'contracts'
       }
     ];
 

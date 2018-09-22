@@ -8,6 +8,7 @@ export default class MyContracts extends Component {
     return (
       <div className="container">
         <div className="title">
+          Contract Signed! <br/>
           My Contracts
         </div>
         <div className="content">
