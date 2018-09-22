@@ -9,7 +9,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import 'EOSIOClient' from '../utils/eosio';
+import EOSIOClient from '../utils/eosio';
 
 const styles = theme => ({
   root: {
@@ -38,11 +38,11 @@ export default class ContractSelect extends Component {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
-                  <Link to="/Wizard">Marriage</Link><br/>
-                  <Link to="/Wizard">Auto Loan</Link><br/>
-                  <Link to="/Wizard">Mortgage</Link><br/>
-                  <Link to="/Wizard">Separation Agreement</Link><br/>
-                  <Link to="/Wizard">Last Will</Link>
+                  <Link to="/create">Marriage</Link><br/>
+                  <Link to="/create">Auto Loan</Link><br/>
+                  <Link to="/create">Mortgage</Link><br/>
+                  <Link to="/create">Separation Agreement</Link><br/>
+                  <Link to="/create">Last Will</Link>
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>

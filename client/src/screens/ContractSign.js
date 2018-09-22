@@ -34,14 +34,32 @@ export default class ContractSign extends Component {
         <div className="content">
         <form>
           <label>
-            Created By:
-            <input
-              type="checkbox"
-              name="signed"
-              value={this.state.field2}
-              onChange={this.handleInputChange}
-            />
+            <ul>
+              <li><input
+                type="checkbox"
+                name="signed"
+                value={this.state.field2}
+                onChange={this.handleInputChange}
+              /> CreatedBy</li>
+            </ul>
           </label>
+          <label>
+            <ul>
+              <li><input
+                type="checkbox"
+                name="signed"
+                disabled={true}
+              /> Agent 2</li>
+            </ul>
+            <ul>
+              <li><input
+                type="checkbox"
+                name="signed"
+                disabled={true}
+              /> Agent 3</li>
+            </ul>
+            </label>
+
           <br/><br/>
         </form>
           <Link to="/">Next</Link>
