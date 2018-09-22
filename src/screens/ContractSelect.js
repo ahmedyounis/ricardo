@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Button from '@material-ui/core/Button';
+
 
 export default class ContractSelect extends Component {
   render() {
@@ -18,10 +20,12 @@ export default class ContractSelect extends Component {
               <option value="Separation">Separation Agreement</option>
               <option value="Will">Last Will</option>
             </select>
-            <input type="submit" value="Select" />
+            <Button variant="contained" input type="submit" color="primary"> Select</Button>
           </form>
         </div>
       </div>
     );
   }
 }
+
+
