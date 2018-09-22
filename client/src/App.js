@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import ContractSelect from './screens/ContractSelect';
-import Wizard from './screens/Wizard';
+import ContractCreate from './screens/ContractCreate';
 import ContractVerify from './screens/ContractVerify';
-
+import ContractSign from './screens/ContractSign';
 
 class App extends Component {
 
@@ -17,14 +17,19 @@ class App extends Component {
         key: 'contractselect'
       },
       {
-        path: '/wizard',
-        component: Wizard,
-        key: 'wizard'
+        path: '/create',
+        component: ContractCreate,
+        key: 'create'
       },
       {
         path: '/verify',
         component: ContractVerify,
         key: 'verify'
+      },
+      {
+        path: '/sign',
+        component: ContractSign,
+        key: 'sign'
       }
     ];
 

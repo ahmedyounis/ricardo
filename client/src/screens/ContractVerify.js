@@ -8,11 +8,11 @@ export default class ContractVerify extends Component {
     return (
       <div className="container">
         <div className="title">
-          Verify Your Contract
+          Contract
         </div>
         <div className="content">
           <div>Image goes here.</div>
-          <Link to="/">Next</Link>
+          <Link to="/">Sign</Link>
         </div>
       </div>
     );

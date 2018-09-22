@@ -3,7 +3,7 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 
 
-export default class ContractSelect extends Component {
+export default class ContractCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
