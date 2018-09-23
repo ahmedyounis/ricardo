@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     const routesInfo = [
       {
-        path: '/index.html',
+        path: '/',
         component: ContractSelect,
         key: 'contractselect'
       },
