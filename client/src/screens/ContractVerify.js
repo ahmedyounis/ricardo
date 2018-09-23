@@ -143,12 +143,12 @@ function FullWidthGrid(props) {
 
       <br/>
 
-      <Link to="/" className="center2"><Button
+      <Link to="/contracts" className="center2"><Button
         variant="contained"
         color="primary"
         className={classes.button}
         style={{margin: '10px'}}
-      > Back to Home
+      > Back to My Contracts
       </Button></Link>
 
       <br/><br/>
