@@ -161,6 +161,7 @@ class Checkout extends React.Component {
                       >
                         {activeStep === steps.length - 1 ? 'Create Contract' : 'Next'}
                       </Button>
+                      
                     </div>
                   </React.Fragment>
                 )}
