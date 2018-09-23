@@ -152,32 +152,32 @@ const styles = theme => ({
 const images = [
   {
     url: 'breakfast.jpg',
-    title: <Link to="/Wizard" style={{textDecoration: 'none', color:'white'}}>Marriage </Link>,
+    title: <Link to="/create" style={{textDecoration: 'none', color:'white'}}>Marriage </Link>,
     width: '33%',
   },
   {
     url: 'nut.jpg',
-    title: <Link to="/Wizard" style={{textDecoration: 'none', color:'white'}}>Wizard </Link>,
+    title: <Link to="/create" style={{textDecoration: 'none', color:'white'}}>Wizard </Link>,
     width: '34%',
   },
   {
     url: '/car.jpg',
-    title: <Link to="/Auto Loan" style={{textDecoration: 'none', color:'white'}}>Auto Loan </Link>,
+    title: <Link to="/create" style={{textDecoration: 'none', color:'white'}}>Auto Loan </Link>,
     width: '33%',
   },
   {
     url: '/mortgage.jpg',
-    title: <Link to="/Mortgage" style={{textDecoration: 'none', color:'white'}}>Mortgage </Link>,
+    title: <Link to="/create" style={{textDecoration: 'none', color:'white'}}>Mortgage </Link>,
     width: '33%',
   },
   {
     url: '/separation.jpg',
-    title: <Link to="/lkmn" style={{textDecoration: 'none', color:'white'}}>Separation </Link>,
+    title: <Link to="/create" style={{textDecoration: 'none', color:'white'}}>Separation </Link>,
     width: '34%',
   },
   {
     url: '/will.png',
-    title: <Link to="/Last Will" style={{textDecoration: 'none', color:'white'}}>Last Will </Link>,
+    title: <Link to="/create" style={{textDecoration: 'none', color:'white'}}>Last Will </Link>,
     width: '33%',
   },
 ];

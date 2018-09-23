@@ -24,9 +24,9 @@ class App extends Component {
         key: 'contractselect'
       },
       {
-        path: '/wizard',
+        path: '/create',
         component: Checkout,
-        key: 'wizard'
+        key: 'create'
       },
       {
         path: '/verify',
