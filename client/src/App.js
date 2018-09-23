@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import ContractSelect from './screens/ContractSelect';
-import ContractCreate from './screens/ContractCreate';
+import ContractCreate from './screens/contractwiz/checkout';
 import ContractVerify from './screens/ContractVerify';
 import ContractSign from './screens/ContractSign';
 import MyContracts from './screens/MyContracts';
