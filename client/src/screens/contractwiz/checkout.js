@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import StepOne from './stepone';
 import StepTwo from './steptwo';
 import StepThree from './stepthree';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   appBar: {
@@ -27,6 +28,7 @@ const styles = theme => ({
       marginLeft: 'auto',
       marginRight: 'auto',
     },
+    backgroundColor: '#992020',
   },
   paper: {
     marginTop: theme.spacing.unit * 3,
@@ -71,6 +73,8 @@ class Checkout extends React.Component {
     activeStep: 0,
   };
 
+
+
   handleNext = () => {
     const { activeStep } = this.state;
     this.setState({
@@ -98,7 +102,7 @@ class Checkout extends React.Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <AppBar position="absolute" color="default" className={classes.appBar}>
+        <AppBar position="absolute" color="#fcfcfc" className={classes.appBar}>
           <Toolbar>
             <Typography variant="title" color="inherit" noWrap>
             Prenuptial agreement
@@ -127,12 +131,12 @@ class Checkout extends React.Component {
                     Your transaction was recorded on block #23523 with transaction #0x24534kgdnt56456456456. An email has been sent to required parties.
                     Awaiting signatures to finalize the contract.
                   </Typography>
-                  <Button
+                  <Link to="/contracts"><Button
                     variant="contained"
                     color="primary"
                     className={classes.button}
                   > My Contracts
-                  </Button>
+                  </Button></Link>
                 </React.Fragment>
               ) : (
                 <React.Fragment>

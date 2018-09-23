@@ -31,24 +31,38 @@ const styles = theme => ({
   title: {
     marginTop: theme.spacing.unit * 2,
   },
+  formControl: {
+    margin: theme.spacing.unit,
+    minWidth: 150,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing.unit * 2,
+  },
 });
 
 
 function StepThree(props) {
-    
-    
+
+
   const { classes } = props;
   return (
     <React.Fragment>
       <Typography variant="title" gutterBottom>
         Type of Agreement
       </Typography>
-       
 
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>Pre-marital agreement</option>
-      <option>Pre-civil partnership agreement</option>
-    </select>
+      <form className={styles.root} autoComplete="off">
+        <FormControl className={styles.formControl}>
+          <InputLabel>Agreement Type</InputLabel>
+          <Select>
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={'premarital'}>Pre-marital agreement</MenuItem>
+            <MenuItem value={'precivil'}>Pre-civil partnership agreement</MenuItem>
+          </Select>
+        </FormControl>
+      </form>
 
 
     <Typography variant="title" gutterBottom>
@@ -58,8 +72,10 @@ function StepThree(props) {
       <Typography variant="title" gutterBottom>
       Assets of the first person
       </Typography>
-      <p>Enter all the property and finances of the first person. It is important that both parties reveal ALL their assets. Select "Add another" to list as many assets as you need.
-</p>
+      <p>Enter all the property and finances of the first person. It is
+      important that both parties reveal ALL their assets. Select "Add another"
+      to list as many assets as you need.
+      </p>
 
 
     </React.Fragment>
