@@ -13,10 +13,16 @@ import Typography from '@material-ui/core/Typography';
 import StepOne from './stepone';
 import StepTwo from './steptwo';
 import StepThree from './stepthree';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   appBar: {
     position: 'relative',
+    color: '#474747',
+    backgroundColor: '#ededed',
+    fontWeight: 300,
+    height: 90,
+    paddingTop: 10,
   },
   layout: {
     width: 'auto',
@@ -26,16 +32,17 @@ const styles = theme => ({
       width: 600,
       marginLeft: 'auto',
       marginRight: 'auto',
-    },
+    }
+
   },
   paper: {
     marginTop: theme.spacing.unit * 3,
     marginBottom: theme.spacing.unit * 3,
-    padding: theme.spacing.unit * 2,
-    [theme.breakpoints.up(600 + theme.spacing.unit * 3 * 2)]: {
+    padding: theme.spacing.unit * 6,
+    [theme.breakpoints.up(600 + theme.spacing.unit * 6 * 2)]: {
       marginTop: theme.spacing.unit * 6,
       marginBottom: theme.spacing.unit * 6,
-      padding: theme.spacing.unit * 3,
+      padding: theme.spacing.unit * 12,
     },
   },
   stepper: {
@@ -71,6 +78,8 @@ class Checkout extends React.Component {
     activeStep: 0,
   };
 
+
+
   handleNext = () => {
     const { activeStep } = this.state;
     this.setState({
@@ -97,71 +106,71 @@ class Checkout extends React.Component {
 
     return (
       <React.Fragment>
-        <CssBaseline />
-        <AppBar position="absolute" color="default" className={classes.appBar}>
-          <Toolbar>
-            <Typography variant="title" color="inherit" noWrap>
-            Prenuptial agreement
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <main className={classes.layout}>
-          <Paper className={classes.paper}>
-            <Typography variant="display1" align="center">
-              Agreement
-            </Typography>
-            <Stepper activeStep={activeStep} className={classes.stepper}>
-              {steps.map(label => (
-                <Step key={label}>
-                  <StepLabel>{label}</StepLabel>
-                </Step>
-              ))}
-            </Stepper>
-            <React.Fragment>
-              {activeStep === steps.length ? (
-                <React.Fragment>
-                  <Typography variant="headline" gutterBottom>
-                    Your Contract has been uploaded to the EOS public blockchain.
-                  </Typography>
-                  <Typography variant="subheading">
-                    Your transaction was recorded on block #23523 with transaction #0x24534kgdnt56456456456. An email has been sent to required parties.
-                    Awaiting signatures to finalize the contract.
-                  </Typography>
-                  <Button
+        <div className = "backcolor">
+          <CssBaseline />
+
+          <main className={classes.layout}>
+            <Paper className={classes.paper}>
+
+              
+              <Typography variant="display1" align="center">
+                Agreement <br/><br/>
+              </Typography>
+
+
+
+              <Stepper activeStep={activeStep} className={classes.stepper}>
+                {steps.map(label => (
+                  <Step key={label}>
+                    <StepLabel>{label}</StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+              <br/><br/>
+              <React.Fragment>
+                {activeStep === steps.length ? (
+                  <React.Fragment>
+                    <Typography variant="headline" gutterBottom>
+                      Your Contract has been uploaded to the EOS public blockchain.
+                    </Typography>
+                    <Typography variant="subheading">
+                      Your transaction was recorded on block #23523 with transaction #0x24534kgdnt56456456456. An email has been sent to required parties.
+                      Awaiting signatures to finalize the contract.
+                    </Typography>
+                    <Link to="/contracts"><Button
                       variant="contained"
                       color="primary"
-                      onClick={this.handleNext}
                       className={classes.button}
-                    >
-                     My Contracts
-                    </Button>
-                </React.Fragment>
-              ) : (
-                <React.Fragment>
-                  {getStepContent(activeStep)}
-                  <div className={classes.buttons}>
-                    {activeStep !== 0 && (
-                      <Button onClick={this.handleBack} className={classes.button}>
-                        Back
+                    > My Contracts
+                    </Button></Link>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    {getStepContent(activeStep)}
+                    <div className={classes.buttons}>
+                      {activeStep !== 0 && (
+                        <Button onClick={this.handleBack} className={classes.button}>
+                          Back
+                        </Button>
+                      )}
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={this.handleNext}
+                        className={classes.button}
+                      >
+                        {activeStep === steps.length - 1 ? 'Create Contract' : 'Next'}
                       </Button>
-                    )}
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={this.handleNext}
-                      className={classes.button}
-                    >
-                      {activeStep === steps.length - 1 ? 'Create Contract' : 'Next'}
-                    </Button>
-                  </div>
-                </React.Fragment>
-              )}
-            </React.Fragment>
-          </Paper>
-        </main>
+                    </div>
+                  </React.Fragment>
+                )}
+              </React.Fragment>
+            </Paper>
+          </main>
+        </div>
       </React.Fragment>
 
-      
+
     );
   }
 }

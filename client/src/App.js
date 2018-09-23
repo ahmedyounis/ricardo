@@ -12,6 +12,8 @@ import ContractVerify from './screens/ContractVerify';
 import ContractSign from './screens/ContractSign';
 import MyContracts from './screens/MyContracts';
 
+import ContractCreate from './screens/contractwiz/checkout';
+
 class App extends Component {
 
   render() {
