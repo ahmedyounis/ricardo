@@ -14,6 +14,13 @@ import StepOne from './stepone';
 import StepTwo from './steptwo';
 import StepThree from './stepthree';
 import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+import Input from '@material-ui/core/Input';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+
 
 const styles = theme => ({
   appBar: {
@@ -55,6 +62,60 @@ const styles = theme => ({
   button: {
     marginTop: theme.spacing.unit * 3,
     marginLeft: theme.spacing.unit,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+  title: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },
+  search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing.unit,
+      width: 'auto',
+    },
+  },
+  searchIcon: {
+    width: theme.spacing.unit * 9,
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+    width: '100%',
+  },
+  inputInput: {
+    paddingTop: theme.spacing.unit,
+    paddingRight: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit,
+    paddingLeft: theme.spacing.unit * 10,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: 120,
+      '&:focus': {
+        width: 200,
+      },
+    },
   },
 });
 
@@ -107,12 +168,46 @@ class Checkout extends React.Component {
     return (
       <React.Fragment>
         <div className = "backcolor">
-          <CssBaseline />
 
+          <CssBaseline />
+          <AppBar color="#800000" position="static">
+            <Toolbar>
+              <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+                <MenuIcon />
+              </IconButton>
+              <Typography className={classes.title} variant="title" color="inherit" noWrap>
+                
+              </Typography>
+              <div className={classes.grow} />
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <Input
+                  placeholder="Search…"
+                  disableUnderline
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                />
+              </div>
+
+              <div>
+                <IconButton
+
+                  aria-haspopup="true"
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </AppBar>
           <main className={classes.layout}>
             <Paper className={classes.paper}>
 
-              
+
               <Typography variant="display1" align="center">
                 Agreement <br/><br/>
               </Typography>
@@ -161,7 +256,6 @@ class Checkout extends React.Component {
                       >
                         {activeStep === steps.length - 1 ? 'Create Contract' : 'Next'}
                       </Button>
-                      
                     </div>
                   </React.Fragment>
                 )}

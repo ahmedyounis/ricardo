@@ -193,7 +193,7 @@ function ButtonBases(props) {
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
-              Material-UI
+              
             </Typography>
             <div className={classes.grow} />
             <div className={classes.search}>
