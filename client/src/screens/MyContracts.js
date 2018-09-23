@@ -195,9 +195,9 @@ class ControlledExpansionPanels extends React.Component {
         color="primary"
         deleteIcon={<DoneIcon />}
       />
-<Button variant="extendedFab" aria-label="Delete" className={classes.button}>
+<Link to="/verify"> <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
 View
-</Button>
+</Button> </Link>
             </Typography>
 
 
@@ -228,9 +228,9 @@ View
         color="primary"
         deleteIcon={<DoneIcon />}
       />
-              <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
-              View
-            </Button>
+<Link to="/verify"> <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
+View
+</Button> </Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -260,9 +260,9 @@ View
         color="primary"
         deleteIcon={<DoneIcon />}
       />
- <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
- View
-</Button>
+<Link to="/verify"> <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
+View
+</Button> </Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -292,9 +292,9 @@ View
         color="primary"
         deleteIcon={<DoneIcon />}
       />
- <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
- View
-</Button>
+<Link to="/verify"> <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
+View
+</Button> </Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
