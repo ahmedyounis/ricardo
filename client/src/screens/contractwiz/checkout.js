@@ -176,7 +176,7 @@ class Checkout extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography className={classes.title} variant="title" color="inherit" noWrap>
-                
+
               </Typography>
               <div className={classes.grow} />
               <div className={classes.search}>
@@ -264,8 +264,6 @@ class Checkout extends React.Component {
           </main>
         </div>
       </React.Fragment>
-
-
     );
   }
 }

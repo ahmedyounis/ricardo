@@ -11,6 +11,16 @@ import Grid from '@material-ui/core/Grid';
 
 import Button from '@material-ui/core/Button';
 
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Input from '@material-ui/core/Input';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Typography from '@material-ui/core/Typography';
+
 
 
 const styles = theme => ({
@@ -22,6 +32,61 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+  title: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },
+  search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing.unit,
+      width: 'auto',
+    },
+  },
+  searchIcon: {
+    width: theme.spacing.unit * 9,
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+    width: '100%',
+  },
+  inputInput: {
+    paddingTop: theme.spacing.unit,
+    paddingRight: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit,
+    paddingLeft: theme.spacing.unit * 10,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: 120,
+      '&:focus': {
+        width: 200,
+      },
+    },
+  },
 });
 
 function FullWidthGrid(props) {
@@ -29,59 +94,64 @@ function FullWidthGrid(props) {
 
   return (
     <div className={classes.root}>
+    <AppBar color="#800000" position="static">
+        <Toolbar>
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+            <MenuIcon />
+          </IconButton>
+          <Typography className={classes.title} variant="title" color="inherit" noWrap>
+
+          </Typography>
+          <div className={classes.grow} />
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <Input
+              placeholder="Search…"
+              disableUnderline
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+            />
+          </div>
+
+          <div>
+            <IconButton
+
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+          </div>
+        </Toolbar>
+      </AppBar>
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>AGREEMENT BETWEEN OWNER AND CONTRACTOR
-for use when a stipulated price forms the
-basis of payment and to be used only
-with the General Conditions of the Contract</Paper>
+          <Paper className={classes.paper}>
+            <img src={require('../assets/img/contract1.jpg')} width='100%'/>
+          </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>THIS AGREEMENT made on the 23rd day of September, 2018 by and between</Paper>
+          <Paper className={classes.paper}>
+            <img src={require('../assets/img/contract1.jpg')} width='100%'/>
+          </Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>Zane Sheikh hereinafter called the "Owner"
-</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>Basha Nehal hereinafter called the "Contractor"</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>WITNESSETH:  that the Owner and Contractor undertake and agree as follows:
-</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>ARTICLE A-1 THE WORK
-          The Contractor shall:
-
-(a)	perform all the Work required by the Contract Documents. (See Tender Form for Description) which have been signed in triplicate by both the parties,
-
-(b)	do and fulfil everything indicated by this Agreement, and
-
-(c)	commence the Work by the 24th day of September, 2018 and substantially perform the Work of this Contract as certified by the Engineer/Architect by the 23rd day of September 2018.
-
-(d)	The "Engineer/Architect" is the person designated as such from time to time by the Owner.
-
-
-</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>(a)	Subject to applicable legislation and, where such legislation does not exist or apply, in accordance with such prescribed regulations or industry practice respecting holdback percentages and in accordance with the provisions of the General Conditions of the Contract, the Owner shall:
-
-(1)  make monthly payments to the Contractor on account of the Contract Price.  The amounts of such payments shall be as certified by the Engineer/Architect; and 
-(2)  upon Substantial Performance of the work as certified by the Engineer/Architect pay to the contractor any unpaid balance of holdback monies then due; and 
-(3)  upon Total Performance of the Work as certified by the Engineer/Architect pay to the contractor any unpaid balance of the Contract Price then due.
-
-</Paper>
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-        <Link to="/contracts"> <Button variant="extendedFab" aria-label="Delete" className={classes.button}>
-        View
-        </Button> </Link>
-        </Grid>
-
       </Grid>
+
+      <br/>
+
+      <Link to="/" className="center2"><Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        style={{margin: '10px'}}
+      > Back to Home
+      </Button></Link>
+
+      <br/><br/>
     </div>
   );
 }
