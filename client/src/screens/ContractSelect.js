@@ -114,7 +114,7 @@ const images = [
     width: '34%',
   },
   {
-    url: '/gear.jpg',
+    url: '/will.png',
     title: <Link to="/Last Will" style={{textDecoration: 'none', color:'white'}}>Last Will </Link>,
     width: '33%',
   },
