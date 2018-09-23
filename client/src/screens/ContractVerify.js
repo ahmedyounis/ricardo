@@ -20,7 +20,17 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Typography from '@material-ui/core/Typography';
+import ReactDOM from 'react-dom';
+// import { Alert } from "react-bs-notifier";
+import { Alert } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+
+
+import Icon from '@material-ui/core/Icon';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
 
 
 const styles = theme => ({
@@ -87,10 +97,33 @@ const styles = theme => ({
       },
     },
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
+  extendedIcon: {
+    marginRight: theme.spacing.unit,
+  },
 });
 
-function FullWidthGrid(props) {
-  const { classes } = props;
+class FullWidthGrid extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+render(){
+  const { classes } = this.props;
 
   return (
     <div className={classes.root}>
@@ -119,7 +152,6 @@ function FullWidthGrid(props) {
 
           <div>
             <IconButton
-
               aria-haspopup="true"
               color="inherit"
             >
@@ -148,12 +180,45 @@ function FullWidthGrid(props) {
         color="primary"
         className={classes.button}
         style={{margin: '10px'}}
-      > Back to My Contracts
+      >Back to My Contracts
       </Button></Link>
+   
+
+      <Link to="/contracts" className="center2"><Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        style={{margin: '10px'}}
+      >Sign
+      </Button></Link>
+
+
+
+
+     <div>
+        <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        style={{margin: '10px'}}
+        onClick={this.toggle}
+      > Sign
+      </Button>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Signature</ModalHeader>
+          <ModalBody>
+            Use Touch ID to approve Ricardian Smart Contract
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
+      </div>
 
       <br/><br/>
     </div>
   );
+            }
 }
 
 FullWidthGrid.propTypes = {
