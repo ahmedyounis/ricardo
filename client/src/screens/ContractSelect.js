@@ -8,6 +8,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Button from '@material-ui/core/Button';
 
 import EOSIOClient from '../utils/eosio';
 
@@ -19,6 +20,12 @@ const styles = theme => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  }
 });
 
 export default class ContractSelect extends Component {
@@ -26,7 +33,9 @@ export default class ContractSelect extends Component {
     return (
       <div className="container">
         <div className="title">
-          Contracts
+          <div className = "center">
+            <h1>Contracts</h1>
+          </div>
         </div>
         <div className="content">
           <h2>Select a contract</h2>
@@ -38,11 +47,31 @@ export default class ContractSelect extends Component {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
-                  <Link to="/create">Marriage</Link><br/>
-                  <Link to="/create">Auto Loan</Link><br/>
-                  <Link to="/create">Mortgage</Link><br/>
-                  <Link to="/create">Separation Agreement</Link><br/>
-                  <Link to="/create">Last Will</Link>
+                  <Link to="/create">
+                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                      Marriage
+                    </Button>
+                  </Link><br/><br/>
+                  <Link to="/create">
+                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                      Auto Loan
+                    </Button>
+                  </Link><br/><br/>
+                  <Link to="/create">
+                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                      Mortgage
+                    </Button>
+                  </Link><br/><br/>
+                  <Link to="/create">
+                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                      Separation
+                    </Button>
+                  </Link><br/><br/>
+                  <Link to="/create">
+                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                      Last Will
+                    </Button>
+                  </Link>
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
