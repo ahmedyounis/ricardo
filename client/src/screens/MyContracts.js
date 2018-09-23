@@ -145,7 +145,7 @@ class ControlledExpansionPanels extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
-              
+
             </Typography>
             <div className={classes.grow} />
             <div className={classes.search}>
@@ -298,6 +298,18 @@ View
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
+
+        <br/>
+
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <Button variant="outlined" className={classes.button}>
+            Create New Contract
+          </Button>
+        </div>
       </div>
     );
   }
