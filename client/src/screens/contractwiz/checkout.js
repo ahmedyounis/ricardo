@@ -173,7 +173,7 @@ class Checkout extends React.Component {
           <AppBar color="#800000" position="static">
             <Toolbar>
               <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-                <MenuIcon />
+                <Link to="/index.html"><MenuIcon /></Link>
               </IconButton>
               <Typography className={classes.title} variant="title" color="inherit" noWrap>
 

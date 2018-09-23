@@ -142,7 +142,7 @@ class ControlledExpansionPanels extends React.Component {
         <AppBar color="#800000" position="static">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
+              <Link to="/create"><MenuIcon /></Link>
             </IconButton>
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
 
@@ -306,9 +306,10 @@ View
           alignItems: 'center',
           justifyContent: 'center'
         }}>
-          <Button variant="outlined" className={classes.button}>
+
+          <Link to="/index.html"><Button variant="outlined" className={classes.button}>
             Create New Contract
-          </Button>
+          </Button></Link>
         </div>
       </div>
     );
