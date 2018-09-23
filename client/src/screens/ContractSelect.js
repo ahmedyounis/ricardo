@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
@@ -104,7 +103,7 @@ const images = [
     width: '33%',
   },
   {
-    url: '/gear.jpg',
+    url: '/mortgage.jpg',
     title: <Link to="/Mortgage" style={{textDecoration: 'none', color:'white'}}>Mortgage </Link>,
     width: '33%',
   },
@@ -114,7 +113,7 @@ const images = [
     width: '34%',
   },
   {
-    url: '/gear.jpg',
+    url: '/will.png',
     title: <Link to="/Last Will" style={{textDecoration: 'none', color:'white'}}>Last Will </Link>,
     width: '33%',
   },
