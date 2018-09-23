@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="stylesheet" href="./React App_files/css">
+    <link href="./React App_files/css(1)" rel="stylesheet">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+</style><style type="text/css">
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: "cherry";
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
+          animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes App-logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+.content {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 90px;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+h1 {
+  padding-top: 25px;
+}
+
+.title {
+  background-image: -webkit-linear-gradient(280deg, #000 , #2b2b2b);
+  background-image: -o-linear-gradient(280deg, #000 , #2b2b2b);
+  background-image: linear-gradient(170deg, #000 , #2b2b2b);
+  height: 90px;
+  color: #fff;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root-214 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple-215 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible-216 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-ripplePulsate-217 {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child-218 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving-219 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate-220 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root-185 {
+  color: inherit;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+  outline: none;
+  position: relative;
+  user-select: none;
+  align-items: center;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root-185::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root-185.MuiButtonBase-disabled-186 {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root-188 {
+  margin: 0;
+  display: block;
+}
+.MuiTypography-display4-189 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 7rem;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.14286em;
+  margin-left: -.04em;
+  letter-spacing: -.04em;
+}
+.MuiTypography-display3-190 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.30357em;
+  margin-left: -.02em;
+  letter-spacing: -.02em;
+}
+.MuiTypography-display2-191 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.8125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.13333em;
+  margin-left: -.02em;
+}
+.MuiTypography-display1-192 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.20588em;
+}
+.MuiTypography-headline-193 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.35417em;
+}
+.MuiTypography-title-194 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.3125rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.16667em;
+}
+.MuiTypography-subheading-195 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+}
+.MuiTypography-body2-196 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.71429em;
+}
+.MuiTypography-body1-197 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.46429em;
+}
+.MuiTypography-caption-198 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.375em;
+}
+.MuiTypography-button-199 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly-200 {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+.MuiTypography-alignLeft-201 {
+  text-align: left;
+}
+.MuiTypography-alignCenter-202 {
+  text-align: center;
+}
+.MuiTypography-alignRight-203 {
+  text-align: right;
+}
+.MuiTypography-alignJustify-204 {
+  text-align: justify;
+}
+.MuiTypography-noWrap-205 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom-206 {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph-207 {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit-208 {
+  color: inherit;
+}
+.MuiTypography-colorPrimary-209 {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary-210 {
+  color: #f50057;
+}
+.MuiTypography-colorTextPrimary-211 {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary-212 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError-213 {
+  color: #f44336;
+}
+</style><style data-jss="" data-meta="ButtonBases">
+.ButtonBases-root-177 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+.ButtonBases-image-178 {
+  height: 200px;
+  position: relative;
+}
+@media (max-width:599.95px) {
+  .ButtonBases-image-178 {
+    width: 100% !important;
+    height: 100px;
+  }
+}
+.ButtonBases-image-178:hover, .ButtonBases-image-178.ButtonBases-focusVisible-179 {
+  z-index: 1;
+}
+.ButtonBases-image-178:hover .ButtonBases-imageBackdrop-182, .ButtonBases-image-178.ButtonBases-focusVisible-179 .ButtonBases-imageBackdrop-182 {
+  opacity: 0.15;
+}
+.ButtonBases-image-178:hover .ButtonBases-imageMarked-184, .ButtonBases-image-178.ButtonBases-focusVisible-179 .ButtonBases-imageMarked-184 {
+  opacity: 0;
+}
+.ButtonBases-image-178:hover .ButtonBases-imageTitle-183, .ButtonBases-image-178.ButtonBases-focusVisible-179 .ButtonBases-imageTitle-183 {
+  border: 4px solid currentColor;
+}
+.ButtonBases-imageButton-180 {
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.ButtonBases-imageSrc-181 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: center 40%;
+}
+.ButtonBases-imageBackdrop-182 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  position: absolute;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #000;
+}
+.ButtonBases-imageTitle-183 {
+  padding: 16px 32px 14px;
+  position: relative;
+}
+.ButtonBases-imageMarked-184 {
+  left: calc(50% - 9px);
+  width: 18px;
+  height: 3px;
+  bottom: -2px;
+  position: absolute;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+</style></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div><div class="ButtonBases-root-177"><button tabindex="0" class="MuiButtonBase-root-185 ButtonBases-image-178" type="button" style="width: 33%;"><span class="ButtonBases-imageSrc-181" style="background-image: url(&quot;breakfast.jpg&quot;);"></span><span class="ButtonBases-imageBackdrop-182"></span><span class="ButtonBases-imageButton-180"><span class="MuiTypography-root-188 MuiTypography-subheading-195 MuiTypography-colorInherit-208 ButtonBases-imageTitle-183"><a href="http://localhost:3000/Wizard" style="text-decoration: none; color: white;">Marriage </a><span class="ButtonBases-imageMarked-184"></span></span></span><span class="MuiTouchRipple-root-214"></span></button><button tabindex="0" class="MuiButtonBase-root-185 ButtonBases-image-178" type="button" style="width: 34%;"><span class="ButtonBases-imageSrc-181" style="background-image: url(&quot;nut.jpg&quot;);"></span><span class="ButtonBases-imageBackdrop-182"></span><span class="ButtonBases-imageButton-180"><span class="MuiTypography-root-188 MuiTypography-subheading-195 MuiTypography-colorInherit-208 ButtonBases-imageTitle-183"><a href="http://localhost:3000/Wizard" style="text-decoration: none; color: white;">Wizard </a><span class="ButtonBases-imageMarked-184"></span></span></span><span class="MuiTouchRipple-root-214"></span></button><button tabindex="0" class="MuiButtonBase-root-185 ButtonBases-image-178" type="button" style="width: 33%;"><span class="ButtonBases-imageSrc-181" style="background-image: url(&quot;/car.jpg&quot;);"></span><span class="ButtonBases-imageBackdrop-182"></span><span class="ButtonBases-imageButton-180"><span class="MuiTypography-root-188 MuiTypography-subheading-195 MuiTypography-colorInherit-208 ButtonBases-imageTitle-183"><a href="http://localhost:3000/Auto%20Loan" style="text-decoration: none; color: white;">Auto Loan </a><span class="ButtonBases-imageMarked-184"></span></span></span><span class="MuiTouchRipple-root-214"></span></button><button tabindex="0" class="MuiButtonBase-root-185 ButtonBases-image-178" type="button" style="width: 33%;"><span class="ButtonBases-imageSrc-181" style="background-image: url(&quot;/gear.jpg&quot;);"></span><span class="ButtonBases-imageBackdrop-182"></span><span class="ButtonBases-imageButton-180"><span class="MuiTypography-root-188 MuiTypography-subheading-195 MuiTypography-colorInherit-208 ButtonBases-imageTitle-183"><a href="http://localhost:3000/Mortgage" style="text-decoration: none; color: white;">Mortgage </a><span class="ButtonBases-imageMarked-184"></span></span></span><span class="MuiTouchRipple-root-214"></span></button><button tabindex="0" class="MuiButtonBase-root-185 ButtonBases-image-178" type="button" style="width: 34%;"><span class="ButtonBases-imageSrc-181" style="background-image: url(&quot;/separation.jpg&quot;);"></span><span class="ButtonBases-imageBackdrop-182"></span><span class="ButtonBases-imageButton-180"><span class="MuiTypography-root-188 MuiTypography-subheading-195 MuiTypography-colorInherit-208 ButtonBases-imageTitle-183"><a href="http://localhost:3000/lkmn" style="text-decoration: none; color: white;">Separation </a><span class="ButtonBases-imageMarked-184"></span></span></span><span class="MuiTouchRipple-root-214"></span></button><button tabindex="0" class="MuiButtonBase-root-185 ButtonBases-image-178" type="button" style="width: 33%;"><span class="ButtonBases-imageSrc-181" style="background-image: url(&quot;/gear.jpg&quot;);"></span><span class="ButtonBases-imageBackdrop-182"></span><span class="ButtonBases-imageButton-180"><span class="MuiTypography-root-188 MuiTypography-subheading-195 MuiTypography-colorInherit-208 ButtonBases-imageTitle-183"><a href="http://localhost:3000/Last%20Will" style="text-decoration: none; color: white;">Last Will </a><span class="ButtonBases-imageMarked-184"></span></span></span><span class="MuiTouchRipple-root-214"></span></button></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js"></script>
+
+</body></html>
