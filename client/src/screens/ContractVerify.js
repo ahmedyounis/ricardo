@@ -22,6 +22,11 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Typography from '@material-ui/core/Typography';
 
 
+import Icon from '@material-ui/core/Icon';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
+
 
 const styles = theme => ({
   root: {
@@ -87,6 +92,12 @@ const styles = theme => ({
       },
     },
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
+  extendedIcon: {
+    marginRight: theme.spacing.unit,
+  },
 });
 
 function FullWidthGrid(props) {
@@ -119,7 +130,6 @@ function FullWidthGrid(props) {
 
           <div>
             <IconButton
-
               aria-haspopup="true"
               color="inherit"
             >
@@ -148,8 +158,19 @@ function FullWidthGrid(props) {
         color="primary"
         className={classes.button}
         style={{margin: '10px'}}
-      > Back to My Contracts
+      >Back to My Contracts
       </Button></Link>
+   
+
+      <Link to="/contracts" className="center2"><Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        style={{margin: '10px'}}
+      >Sign
+      </Button></Link>
+
+
 
       <br/><br/>
     </div>
