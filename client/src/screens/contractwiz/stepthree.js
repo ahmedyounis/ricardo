@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -33,7 +33,7 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 150,
+    Width: 150,
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
@@ -41,50 +41,41 @@ const styles = theme => ({
 });
 
 
-function StepThree(props) {
 
+export default class StepThree extends Component {
+  render() {
+    return (
+      <div>
+        <Typography variant="title" gutterBottom>
+          Type of Agreement
+        </Typography>
 
-  const { classes } = props;
-  return (
-    <React.Fragment>
-      <Typography variant="title" gutterBottom>
-        Type of Agreement
-      </Typography>
+        <form className={styles.root} autoComplete="off">
+          <FormControl className={styles.formControl}>
+            <InputLabel>Agreement Type</InputLabel>
+            <Select>
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={'premarital'}>Pre-marital agreement</MenuItem>
+              <MenuItem value={'precivil'}>Pre-civil partnership agreement</MenuItem>
+            </Select>
+          </FormControl>
+        </form>
 
-      <form className={styles.root} autoComplete="off">
-        <FormControl className={styles.formControl}>
-          <InputLabel>Agreement Type</InputLabel>
-          <Select>
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={'premarital'}>Pre-marital agreement</MenuItem>
-            <MenuItem value={'precivil'}>Pre-civil partnership agreement</MenuItem>
-          </Select>
-        </FormControl>
-      </form>
-
-
-    <Typography variant="title" gutterBottom>
-        Date of intended marriage
-      </Typography>
 
       <Typography variant="title" gutterBottom>
-      Assets of the first person
-      </Typography>
-      <p>Enter all the property and finances of the first person. It is
-      important that both parties reveal ALL their assets. Select "Add another"
-      to list as many assets as you need.
-      </p>
+          Date of intended marriage
+        </Typography>
 
-
-    </React.Fragment>
-  );
+        <Typography variant="title" gutterBottom>
+        Assets of the first person
+        </Typography>
+        <p>Enter all the property and finances of the first person. It is
+        important that both parties reveal ALL their assets. Select "Add another"
+        to list as many assets as you need.
+        </p>
+      </div>
+    );
+  }
 }
-
-
-StepThree.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(StepThree);
