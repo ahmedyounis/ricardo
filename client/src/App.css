@@ -1,3 +1,16 @@
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: "cherry";
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +38,12 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+
+.content {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 90px;
 }

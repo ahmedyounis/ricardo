@@ -29,7 +29,7 @@ export default class ContractSelect extends Component {
           Contracts
         </div>
         <div className="content">
-          <strong>Select a contract</strong>
+          <h2>Select a contract</h2>
 
           <div className={styles.root}>
             <ExpansionPanel>
