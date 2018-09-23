@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import ContractSelect from './screens/ContractSelect';
-import Wizard from './screens/Wizard';
+//import Wizard from './screens/Wizard';
 import ContractWiz from './screens/contractwiz/stepone';
 import ContractWizTwo from './screens/contractwiz/steptwo';
 import ContractWizThree from './screens/contractwiz/stepthree';
@@ -24,11 +24,6 @@ class App extends Component {
       {
         path: '/wizard',
         component: Checkout,
-        key: 'wizard'
-      },
-      {
-        path: '/wizarded',
-        component: Wizard,
         key: 'wizard'
       },
       {
