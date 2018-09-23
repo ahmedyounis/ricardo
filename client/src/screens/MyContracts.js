@@ -3,16 +3,18 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 
 
-export default class ContractVerify extends Component {
+export default class MyContracts extends Component {
   render() {
     return (
       <div className="container">
         <div className="title">
-          Contract
+          Contract Signed! <br/>
+          My Contracts
         </div>
         <div className="content">
-          <div>Image goes here.</div>
-          <Link to="/sign">Confirm</Link>
+          <div>Contract 1</div>
+          <div>Contract 2</div>
+          <Link to="/">Create Another Contract</Link>
         </div>
       </div>
     );
