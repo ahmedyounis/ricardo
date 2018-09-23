@@ -20,6 +20,11 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Typography from '@material-ui/core/Typography';
+import ReactDOM from 'react-dom';
+// import { Alert } from "react-bs-notifier";
+import { Alert } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
 
 
 
@@ -89,8 +94,25 @@ const styles = theme => ({
   },
 });
 
-function FullWidthGrid(props) {
-  const { classes } = props;
+class FullWidthGrid extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+render(){
+  const { classes } = this.props;
 
   return (
     <div className={classes.root}>
@@ -151,9 +173,31 @@ function FullWidthGrid(props) {
       > Back to My Contracts
       </Button></Link>
 
+
+     <div>
+        <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        style={{margin: '10px'}}
+        onClick={this.toggle}
+      > Sign
+      </Button>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Signature</ModalHeader>
+          <ModalBody>
+            Use Touch ID to approve Ricardian Smart Contract
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
+      </div>
+
       <br/><br/>
     </div>
   );
+            }
 }
 
 FullWidthGrid.propTypes = {
