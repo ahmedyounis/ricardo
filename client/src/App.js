@@ -3,15 +3,11 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import ContractSelect from './screens/ContractSelect';
-<<<<<<< HEAD
-import ContractCreate from './screens/ContractCreate';
-=======
 import Wizard from './screens/Wizard';
 import ContractWiz from './screens/contractwiz/stepone';
 import ContractWizTwo from './screens/contractwiz/steptwo';
 import ContractWizThree from './screens/contractwiz/stepthree';
 import Checkout from './screens/contractwiz/checkout';
->>>>>>> ahmed
 import ContractVerify from './screens/ContractVerify';
 import ContractSign from './screens/ContractSign';
 import MyContracts from './screens/MyContracts';
@@ -26,11 +22,6 @@ class App extends Component {
         key: 'contractselect'
       },
       {
-<<<<<<< HEAD
-        path: '/create',
-        component: ContractCreate,
-        key: 'create'
-=======
         path: '/wizard',
         component: Checkout,
         key: 'wizard'
@@ -39,7 +30,6 @@ class App extends Component {
         path: '/wizarded',
         component: Wizard,
         key: 'wizard'
->>>>>>> ahmed
       },
       {
         path: '/verify',
