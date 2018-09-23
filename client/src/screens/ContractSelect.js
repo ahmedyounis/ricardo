@@ -119,7 +119,7 @@ export default class ContractSelect extends Component {
       <div className="container">
         <div className="title">
           <div className = "center">
-            <h1>Contracts</h1>
+            <h1>Ledger Signed</h1>
           </div>
         </div>
         <div className="content">
@@ -133,62 +133,30 @@ export default class ContractSelect extends Component {
               <ExpansionPanelDetails>
                 <Typography>
                   <Link to="/create">
-                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                    <Button variant="outlined" href="#contained-buttons" className={styles.button}>
                       Marriage
                     </Button>
                   </Link><br/><br/>
                   <Link to="/create">
-                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                    <Button variant="outlined" href="#contained-buttons" className={styles.button}>
                       Auto Loan
                     </Button>
                   </Link><br/><br/>
                   <Link to="/create">
-                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                    <Button variant="outlined" href="#contained-buttons" className={styles.button}>
                       Mortgage
                     </Button>
                   </Link><br/><br/>
                   <Link to="/create">
-                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                    <Button variant="outlined" href="#contained-buttons" className={styles.button}>
                       Separation
                     </Button>
                   </Link><br/><br/>
                   <Link to="/create">
-                    <Button variant="contained" href="#contained-buttons" className={styles.button}>
+                    <Button variant="outlined" href="#contained-buttons" className={styles.button}>
                       Last Will
                     </Button>
                   </Link>
-
-                  {images.map(image => (
-                    <ButtonBase
-                      focusRipple
-                      key={image.title}
-                      className={styles.image}
-                      focusVisibleClassName={styles.focusVisible}
-                      style={{
-                        width: image.width,
-                      }}
-                    >
-                      <span
-                        className={styles.imageSrc}
-                        style={{
-                          backgroundImage: `url(${image.url})`,
-                        }}
-                      />
-                      <span className={styles.imageBackdrop} />
-                      <span className={styles.imageButton}>
-                        <Typography
-                          component="span"
-                          variant="subheading"
-                          color="inherit"
-                          className={styles.imageTitle}
-                        >
-                          {image.title}
-                          <span className={styles.imageMarked} />
-                        </Typography>
-                      </span>
-                    </ButtonBase>
-                  ))}
-
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
