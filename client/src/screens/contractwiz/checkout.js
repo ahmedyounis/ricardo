@@ -127,6 +127,14 @@ class Checkout extends React.Component {
                     Your transaction was recorded on block #23523 with transaction #0x24534kgdnt56456456456. An email has been sent to required parties.
                     Awaiting signatures to finalize the contract.
                   </Typography>
+                  <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={this.handleNext}
+                      className={classes.button}
+                    >
+                     My Contracts
+                    </Button>
                 </React.Fragment>
               ) : (
                 <React.Fragment>
