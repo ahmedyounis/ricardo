@@ -12,6 +12,16 @@ function StepTwo() {
       Second Person Details 
     </Typography>
     <Grid container spacing={24}>
+    <Grid item xs={12}>
+          <TextField
+            required
+            id="accountName"
+            name="accountName"
+            label="EOS Account Name"
+            fullWidth
+            autoComplete="fname"
+          />
+        </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
           required
