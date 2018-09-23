@@ -130,7 +130,7 @@ render(){
     <AppBar color="#800000" position="static">
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-            <MenuIcon />
+            <Link to="/contracts"><MenuIcon /></Link>
           </IconButton>
           <Typography className={classes.title} variant="title" color="inherit" noWrap>
 
@@ -182,15 +182,7 @@ render(){
         style={{margin: '10px'}}
       >Back to My Contracts
       </Button></Link>
-   
 
-      <Link to="/contracts" className="center2"><Button
-        variant="contained"
-        color="primary"
-        className={classes.button}
-        style={{margin: '10px'}}
-      >Sign
-      </Button></Link>
 
 
 

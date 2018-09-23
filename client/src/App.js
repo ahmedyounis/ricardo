@@ -45,7 +45,7 @@ class App extends Component {
       },
       {
         path: '/index.html',
-        component: MyContracts,
+        component: ContractSelect,
         key: 'contractselect'
       }
     ];

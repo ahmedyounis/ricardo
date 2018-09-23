@@ -190,10 +190,10 @@ function ButtonBases(props) {
       <AppBar color="#800000" position="static">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
+              <Link to="/contracts"><MenuIcon /></Link>
             </IconButton>
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
-              
+
             </Typography>
             <div className={classes.grow} />
             <div className={classes.search}>
