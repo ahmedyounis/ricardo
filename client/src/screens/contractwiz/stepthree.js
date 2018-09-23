@@ -10,6 +10,7 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
 
 const products = [
 
@@ -32,11 +33,24 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 2,
   },
   formControl: {
-    margin: theme.spacing.unit,
-    Width: 150,
+    minWidth: 150,
+    paddingRight:100,
+  },
+  sizing: {
+    width: '150px',
+    paddingRight: 1
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
+  },
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
   },
 });
 
@@ -51,9 +65,9 @@ export default class StepThree extends Component {
         </Typography>
 
         <form className={styles.root} autoComplete="off">
-          <FormControl className={styles.formControl}>
+          <FormControl >
             <InputLabel>Agreement Type</InputLabel>
-            <Select>
+            <Select style={{width:150}}>
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
@@ -61,16 +75,46 @@ export default class StepThree extends Component {
               <MenuItem value={'precivil'}>Pre-civil partnership agreement</MenuItem>
             </Select>
           </FormControl>
-        </form>
+        </form> <br/><br/>
 
 
-      <Typography variant="title" gutterBottom>
+        <Typography variant="title" gutterBottom>
           Date of intended marriage
         </Typography>
 
+        <br/>
+        <form className={styles.container} noValidate>
+          <TextField
+            id="date"
+            label="Marriage Date"
+            type="date"
+            defaultValue="2017-05-24"
+            className={styles.textField}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </form>
+        <br/><br/>
+
         <Typography variant="title" gutterBottom>
-        Assets of the first person
+          Assets of the first person
         </Typography>
+        <form className={styles.container} noValidate autoComplete="off">
+          <TextField
+            id="filled-full-width"
+            label="Label"
+            style={{ margin: 8 }}
+            placeholder="Assets"
+            fullWidth
+            margin="normal"
+            variant="filled"
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </form>
+
         <p>Enter all the property and finances of the first person. It is
         important that both parties reveal ALL their assets. Select "Add another"
         to list as many assets as you need.
