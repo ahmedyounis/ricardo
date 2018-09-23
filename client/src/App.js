@@ -4,6 +4,10 @@ import logo from './logo.svg';
 import './App.css';
 import ContractSelect from './screens/ContractSelect';
 import Wizard from './screens/Wizard';
+import ContractWiz from './screens/contractwiz/stepone';
+import ContractWizTwo from './screens/contractwiz/steptwo';
+import ContractWizThree from './screens/contractwiz/stepthree';
+import Checkout from './screens/contractwiz/checkout';
 import ContractVerify from './screens/ContractVerify';
 
 
@@ -18,6 +22,11 @@ class App extends Component {
       },
       {
         path: '/wizard',
+        component: Checkout,
+        key: 'wizard'
+      },
+      {
+        path: '/wizarded',
         component: Wizard,
         key: 'wizard'
       },
