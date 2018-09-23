@@ -9,6 +9,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 import EOSIOClient from '../utils/eosio';
 
@@ -25,8 +26,92 @@ const styles = theme => ({
   },
   input: {
     display: 'none',
-  }
+  },
+  image: {
+    position: 'relative',
+    height: 200,
+    [theme.breakpoints.down('xs')]: {
+      width: '100% !important', // Overrides inline-style
+      height: 100,
+    },
+    '&:hover, &$focusVisible': {
+      zIndex: 1,
+      '& $imageBackdrop': {
+        opacity: 0.15,
+      },
+      '& $imageMarked': {
+        opacity: 0,
+      },
+      '& $imageTitle': {
+        border: '4px solid currentColor',
+      },
+    },
+  },
+  focusVisible: {},
+  imageButton: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.palette.common.white,
+  },
+  imageSrc: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center 40%',
+  },
+  imageBackdrop: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundColor: theme.palette.common.black,
+    opacity: 0.4,
+    transition: theme.transitions.create('opacity'),
+  },
+  imageTitle: {
+    position: 'relative',
+    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 4}px ${theme.spacing.unit + 6}px`,
+  },
+  imageMarked: {
+    height: 3,
+    width: 18,
+    backgroundColor: theme.palette.common.white,
+    position: 'absolute',
+    bottom: -2,
+    left: 'calc(50% - 9px)',
+    transition: theme.transitions.create('opacity'),
+  },
 });
+
+
+const images = [
+  {
+    url: 'breakfast.jpg',
+    title: <Link to="/Wizard" style={{textDecoration: 'none', color:'white'}}>Marriage </Link>,
+    width: '30%',
+  },
+  {
+    url: 'nut.jpg',
+    title: <Link to="/Wizard" style={{textDecoration: 'none', color:'white'}}>Wizard </Link>,
+    width: '40%',
+  },
+  {
+    url: '/gear.jpg',
+    title: <Link to="/lkmn" style={{textDecoration: 'none', color:'white'}}>Marriage </Link>,
+    width: '30%',
+  },
+];
+
 
 export default class ContractSelect extends Component {
   render() {
@@ -72,6 +157,38 @@ export default class ContractSelect extends Component {
                       Last Will
                     </Button>
                   </Link>
+
+                  {images.map(image => (
+                    <ButtonBase
+                      focusRipple
+                      key={image.title}
+                      className={styles.image}
+                      focusVisibleClassName={styles.focusVisible}
+                      style={{
+                        width: image.width,
+                      }}
+                    >
+                      <span
+                        className={styles.imageSrc}
+                        style={{
+                          backgroundImage: `url(${image.url})`,
+                        }}
+                      />
+                      <span className={styles.imageBackdrop} />
+                      <span className={styles.imageButton}>
+                        <Typography
+                          component="span"
+                          variant="subheading"
+                          color="inherit"
+                          className={styles.imageTitle}
+                        >
+                          {image.title}
+                          <span className={styles.imageMarked} />
+                        </Typography>
+                      </span>
+                    </ButtonBase>
+                  ))}
+
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
